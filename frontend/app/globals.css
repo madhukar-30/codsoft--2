@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+.flex-prop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadowAll {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.shadowText {
+  text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.secNav {
+  position: absolute;
+  right: 20px;
+  top: 53px;
+  width: auto;
+  height: auto;
+
+  padding: 1rem 4rem;
+  font-size: 1.3rem;
+
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border-radius: 5px;
+  z-index: 5;
+  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all .2s ease-in-out; 
+  display: none;
+}
+
+#menu-btn:hover .secNav {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
